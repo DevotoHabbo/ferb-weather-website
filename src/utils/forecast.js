@@ -8,7 +8,8 @@ const forecast = (longitute,latitude,cb) => {
         } else if(body.error){
             cb('The location is not found', undefined)
         }else{
-            cb(undefined,'The weather is ' + body.daily.data[0].summary + ' with the temperature '+body.currently.temperature+' and the rain chance is ' +body.currently.precipProbability)
+           
+            cb(undefined,'The weather is ' + body.daily.data[0].summary + ' with the temperature '+body.currently.temperature+'. The high temperature today is '+ body.daily.data[0].temperatureHigh +' with a low of '+body.daily.data[0].temperatureLow+' .The rain chance is ' +body.currently.precipProbability + '% chance ')
             
         }
     })
