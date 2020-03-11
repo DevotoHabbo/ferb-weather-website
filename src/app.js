@@ -92,7 +92,8 @@ app.get('/help/*',(req,res)=>{
 app.get('*', (req,res)=>{
     res.render('404',{
         title:'Page Not Found',
-        text:' Opps you are the wrong place, but you can look at my beautiful photo'
+        text:' Opps you are the wrong place, but you can look at my beautiful photo',
+        name:'Ferb'
     })
 })
 // Port connection
